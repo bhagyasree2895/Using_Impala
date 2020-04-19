@@ -48,7 +48,31 @@ insert into employee (NAME,years)VALUES ('divya',20);
 
 ## Select query:
 select name from employee where years>25 order by years; 
+
 select * from employee where years>25 order by years;
+
+## Categories of built in functions in Impala, such as:
+
+- Mathematical Functions: 
+select abs(-1);
+
+select concat(‘The rain ‘, ‘in Spain’);
+
+select power(2,5);
+
+select round(price) as dollar_value from product_catalog where price between 0.0 and 100.0;
+
+select cos(null);
+
+select power(2,null);
+
+select concat(‘a’,null,’b’);
+
+- Type Conversion Functions
+- Date and Time Functions
+- Conditional Functions
+- String Functions
+- Aggregation functions
 ## References
 
 https://data-flair.training/blogs/pros-and-cons-of-impala/
