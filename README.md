@@ -53,7 +53,8 @@ select * from employee where years>25 order by years;
 
 ## Categories of built in functions in Impala, such as:
 
-- Mathematical Functions: 
+### Mathematical Functions: 
+
 select abs(-1);
 
 select concat(‘The rain ‘, ‘in Spain’);
@@ -68,11 +69,55 @@ select power(2,null);
 
 select concat(‘a’,null,’b’);
 
-- Type Conversion Functions
-- Date and Time Functions
-- Conditional Functions
-- String Functions
-- Aggregation functions
+### Type Conversion Functions:
+
+Syntax: cast(expr as type);
+
+### Date and Time Functions:
+
+current_timestamp();
+
+dayname(string date);
+
+dayofweek(string date);
+
+dayofyear(timestamp date);
+
+hour(string date);
+
+### Conditional Functions:
+
+CASE WHEN a THEN b [WHEN c THEN d]… [ELSE e] END
+
+coalesce(type v1, type v2, …)
+
+if(boolean condition, type ifTrue, type ifFalseOrNull)
+
+isnull(type a, type ifNotNull)
+
+nullifzero(numeric_expr)
+
+### String Functions:
+
+ascii(string str)
+
+char_length(string a), character_length(string a)
+
+concat(string a, string b…)
+
+instr(string str, string substr)
+
+length(string a)
+
+locate(string substr, string str[, int pos])
+
+reverse(string a)
+
+### Aggregation functions:
+
+select count(product_id) from product_catalog;
+
+select max(height), avg(height) from census_data where age > 20;
 ## References
 
 https://data-flair.training/blogs/pros-and-cons-of-impala/
