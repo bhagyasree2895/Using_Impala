@@ -29,13 +29,21 @@ describe employee;
 
 ## Insert records into "employee" using below insert statements
 insert into employee (NAME,years)VALUES ('maneesh',25);
+
 insert into employee (NAME,years)VALUES ('bhagya', 23);
+
 insert into employee (NAME,years)VALUES ('Nikitha', 23);
+
 insert into employee (NAME,years)VALUES (' Nandu', 12);
+
 insert into employee (NAME,years)VALUES (' chaitra', 30);
+
 insert into employee (NAME,years)VALUES (' sushma', 50);
+
 insert into employee (NAME,years)VALUES (' sowmya', 3);
+
 insert into employee (NAME,years)VALUES ('pavan',20);
+
 insert into employee (NAME,years)VALUES ('divya',20);
 
 ## Select query:
@@ -44,7 +52,10 @@ select * from employee where years>25 order by years;
 ## References
 
 https://data-flair.training/blogs/pros-and-cons-of-impala/
+
 https://www.dezyre.com/article/impala-vs-hive-difference-between-sql-on-hadoop-components/180
+
 https://www.dezyre.com/hadoop-tutorial/hadoop-impala-tutorial
+
 https://docs.cloudera.com/documentation/enterprise/5-8-x/topics/introduction.html
 
