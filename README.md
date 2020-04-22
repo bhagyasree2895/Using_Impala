@@ -12,23 +12,23 @@ https://github.com/bhagyasree2895/Using_Impala
 - You can also communicate through Hue Query editor.<br />
 Once you enter the VM, open the web browser where you can find Hue. Click on that.
 ## To see the databases present in Impala:
-show databases;
+```show databases;```
 
 ## creating a database
-create database new_db;
+```create database new_db;```
 
 ## creating a table
-create table employee (name string, years int);
+```create table employee (name string, years int);```
 
 ## loading data into impala
-hadoop fs -put input.txt /user/impala/
-load data inpath '/user/impala/input.txt' into table employee;
+```hadoop fs -put input.txt /user/impala/```
+```load data inpath '/user/impala/input.txt' into table employee;```
 
 ## Describe Statement: Metadata about table "employee" 
-describe employee;
+```describe employee;```
 
 ## Insert records into "employee" using below insert statements
-insert into employee (NAME,years)VALUES ('maneesh',25);
+```insert into employee (NAME,years)VALUES ('maneesh',25);
 
 insert into employee (NAME,years)VALUES ('bhagya', 23);
 
@@ -45,16 +45,16 @@ insert into employee (NAME,years)VALUES (' sowmya', 3);
 insert into employee (NAME,years)VALUES ('pavan',20);
 
 insert into employee (NAME,years)VALUES ('divya',20);
-
+```
 ## Select query:
+```
 select name from employee where years>25 order by years; 
 
 select * from employee where years>25 order by years;
-
-## Categories of built in functions in Impala, such as:
+```
 
 ### Mathematical Functions: 
-
+```
 select abs(-1);
 
 select concat(‘The rain ‘, ‘in Spain’);
@@ -68,13 +68,13 @@ select cos(null);
 select power(2,null);
 
 select concat(‘a’,null,’b’);
-
+```
 ### Type Conversion Functions:
 
-Syntax: cast(expr as type);
+```Syntax: cast(expr as type);```
 
 ### Date and Time Functions:
-
+```
 current_timestamp();
 
 dayname(string date);
@@ -84,9 +84,9 @@ dayofweek(string date);
 dayofyear(timestamp date);
 
 hour(string date);
-
+```
 ### Conditional Functions:
-
+```
 CASE WHEN a THEN b [WHEN c THEN d]… [ELSE e] END
 
 coalesce(type v1, type v2, …)
@@ -96,10 +96,11 @@ if(boolean condition, type ifTrue, type ifFalseOrNull)
 isnull(type a, type ifNotNull)
 
 nullifzero(numeric_expr)
+```
 
 ### String Functions:
 
-ascii(string str)
+```ascii(string str)
 
 char_length(string a), character_length(string a)
 
@@ -112,12 +113,12 @@ length(string a)
 locate(string substr, string str[, int pos])
 
 reverse(string a)
-
+```
 ### Aggregation functions:
 
-select count(product_id) from product_catalog;
+```select count(product_id) from product_catalog;```
 
-select max(height), avg(height) from census_data where age > 20;
+```select max(height), avg(height) from census_data where age > 20;```
 ## References
 
 https://data-flair.training/blogs/pros-and-cons-of-impala/
